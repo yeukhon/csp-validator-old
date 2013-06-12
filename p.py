@@ -1,6 +1,20 @@
 import pyparsing
-from pyparsing import alphas, Literal, nums, OneOrMore, Optional, Regex, White, Word, ZeroOrMore, Group, Dict, Suppress, Or, delimitedList, StringEnd, printables, Combine, alphanums
-
+from pyparsing import (
+        alphas, 
+        Combine,
+        delimitedList,
+        Dict,
+        Group,
+        Literal,
+        nums,
+        OneOrMore,
+        Optional,
+        Or,
+        Suppress,
+        White,
+        Word,
+        ZeroOrMore,
+)        
 
 space = Suppress(White(" \t"))
 port = Word(nums)
