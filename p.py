@@ -26,7 +26,11 @@ strs = [
         "default-src 'self' http://example.org",
         "default-src 'self' example.org",
         "default-src 'self' *.example.org",
-        "default-src 'self' 'none';"
+        "default-src 'self' 'none';",
+        "default-src http://example.org 'self'",
+        "default-src example.org 'self'",
+        "default-src *.example.org 'self'",
+
 ]
 
 def test():
@@ -34,7 +38,6 @@ def test():
     for str in strs:
         try:
             p = policy.parseString(str)
-            print 'v ', p['default-src']
             print str, ' ----> ', policy.parseString(str)
         except pyparsing.ParseException:
             print "ERROR"
