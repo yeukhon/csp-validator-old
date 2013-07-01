@@ -38,19 +38,19 @@ def validate(csp):
     We have to either fail or warn a CSP rule if they have the
     following issues:
 
-    (1) when 'none' or * is found as a directive value, having 
+    (1) when 'none' or * is found as a directive value, having
     other directive values defined in the grammar appear
     in the same policy (per directive), and/or
     (2) when 'unsafe-inline' or 'unsafe-eval' is found as part of
     a policy (per directive)
-    
+
     If the policy passes the grammar test, we can only assume it
     works.
 
     If the policy does not pass the grammar test, defer the
     exception until later; add the error to a list.
 
-    If the policy contains 'unsafe-inline' or 'unsaife-eval', 
+    If the policy contains 'unsafe-inline' or 'unsaife-eval',
     ddd the policy to warning.
 
     """
@@ -83,7 +83,7 @@ def validate(csp):
 
 def check(rule):
     """ Perform some quick check on each rule in the CSP header. """
-    # split incoming rule into a list by space, which produce 
+    # split incoming rule into a list by space, which produce
     # [directive_name, directive_value1, directive_value2, etc]
     parts = rule.split()
     if parts:   # if rule ends with ; we get an empty as last item
