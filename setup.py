@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name="csp-validator",
-      version="0.1",
+      version="0.2",
       description="Content-Security-Policy validator",
       author="Yeuk Hon Wong",
       classifiers=[
