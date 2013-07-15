@@ -33,15 +33,6 @@ grammar = Grammar(
 def parse(input):
     return grammar.parse(input)
 
-class CSPRuleWarning(Warning):
-    def __init__(self, rule, msg):
-        super(CSPRuleWarning, self).__init__()
-        self.msg = msg
-        self.rule = rule
-
-    def __str__(self):
-        return repr("CSP rule: %s\n Issue: %s" %(self.rule, self.msg))
-
 def validate(csp):
     warnings = []
     errors = []
